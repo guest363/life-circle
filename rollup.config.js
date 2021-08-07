@@ -40,7 +40,7 @@ export default {
     sourcemap: !production && true,
     format: "iife",
     name: "lifeCircle",
-    file: "public/bundle.js",
+    file: "public/lifeCircle.js",
   },
   plugins: [
     svelte({
@@ -69,8 +69,8 @@ export default {
     }),
     !production &&
       htmlTemplate({
-        template: "index.html",
-        target: "index.html",
+        template: "./src/index.html",
+        target: "./public/index.html",
       }),
     // In dev mode, call `npm run start` once
     // the bundle has been generated
