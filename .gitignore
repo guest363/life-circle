@@ -1,0 +1,12 @@
+node_modules/
+dist/
+data/
+npm-debug.log
+.cache
+db/base
+logs
+.vscode
+build/
+media/
+/public/*
+.firebase/*
