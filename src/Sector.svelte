@@ -1,5 +1,4 @@
 <script>
-  import { fade } from "svelte/transition";
   import getHexCorner from "./support/getHexCorner.js";
 
   export let name;
@@ -19,6 +18,21 @@
     rich: "БЛАГОСОСТОЯНИЕ",
     family: "СЕМЬЯ",
   };
+
+  const svgFade = (node, { duration }) => {
+    return {
+      duration,
+      css: (t) => {
+        return `
+					
+					color: hsl(
+						${~~(t * 360)},
+						${Math.min(100, 1000 - 1000 * t)}%,
+						${Math.min(50, 500 - 500 * t)}%
+					);`;
+      },
+    };
+  };
 </script>
 
 {#each grid as gridValue, i}
@@ -36,7 +50,7 @@
 {/each}
 
 <g
-  transition:fade
+  transition:svgFade="{{duration: 1000}}"
   transform="{`translate(${getHexCorner(
     105,
     flip ? direction + 1 : direction
