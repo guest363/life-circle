@@ -24,6 +24,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
+    height: 90%;
   }
 </style>

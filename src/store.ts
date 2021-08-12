@@ -1,5 +1,13 @@
 import { writable } from "svelte/store";
-const defaultStore = ["hobby", "friendship", "health", "job", "love", "rich"];
+const defaultStore = [
+  "hobby",
+  "friendship",
+  "health",
+  "job",
+  "love",
+  "rich",
+  "family",
+];
 
 function Circle() {
   /* инициализируем хранилище с начальным состоянием */

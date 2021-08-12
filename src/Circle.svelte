@@ -36,7 +36,7 @@
 </script>
 
 <svg
-  viewBox="-115 -110 230 220"
+  viewBox="-120 -120 250 240"
   on:mousedown="{start}"
   on:touchstart="{start}"
   on:mouseup="{end}"

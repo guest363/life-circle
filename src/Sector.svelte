@@ -1,4 +1,5 @@
 <script>
+  import { fade } from "svelte/transition";
   import getHexCorner from "./support/getHexCorner.js";
 
   export let name;
@@ -16,6 +17,7 @@
     job: "РАБОТА",
     love: "ЛЮБОВЬ",
     rich: "БЛАГОСОСТОЯНИЕ",
+    family: "СЕМЬЯ",
   };
 </script>
 
@@ -34,10 +36,11 @@
 {/each}
 
 <g
+  transition:fade
   transform="{`translate(${getHexCorner(
     105,
     flip ? direction + 1 : direction
-  )}) rotate(${direction * 60 + (flip ? -90 : 90)})`}"
+  )}) rotate(${direction * 51.5 + (flip ? -95 : 86)})`}"
 >
   <text x="50" y="{flip ? 5 : 0}" text-anchor="middle">
     {radarTranslation[name]}
@@ -77,5 +80,8 @@
   }
   .love {
     fill: #e23f45;
+  }
+  .family {
+    fill: #dfe23f;
   }
 </style>
