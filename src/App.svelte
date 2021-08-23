@@ -1,9 +1,12 @@
 <script>
   import Circle from "./Circle.svelte";
+  import { todo_display } from "./store/todo-display";
+  import Todo from "./Todo.svelte";
 </script>
 
-<div class="container">
+<div class="{$todo_display ? 'container--full' : 'container--part'}">
   <Circle />
+  <Todo />
 </div>
 
 <style>
@@ -19,11 +22,18 @@
   :global(html) {
     height: 100%;
   }
-  .container {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+  .container--full {
     justify-content: center;
-    height: 90%;
+    height: 100%;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 2fr 1fr;
+  }
+  .container--part {
+    justify-content: center;
+    height: 100%;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 2fr 30px;
   }
 </style>

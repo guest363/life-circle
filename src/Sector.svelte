@@ -1,4 +1,5 @@
 <script>
+  import { LIFE_PARTS } from "./constants";
   import getHexCorner from "./support/getHexCorner.js";
 
   export let name;
@@ -9,22 +10,11 @@
 
   const flip = direction === 2 || direction === 1;
 
-  const radarTranslation = {
-    hobby: "ХОББИ",
-    friendship: "ДРУЖБА",
-    health: "ЗДОРОВЬЕ",
-    job: "РАБОТА",
-    love: "ЛЮБОВЬ",
-    rich: "БЛАГОСОСТОЯНИЕ",
-    family: "СЕМЬЯ",
-  };
-
   const svgFade = (node, { duration }) => {
     return {
       duration,
       css: (t) => {
-        return `
-					
+        return `	
 					color: hsl(
 						${~~(t * 360)},
 						${Math.min(100, 1000 - 1000 * t)}%,
@@ -50,14 +40,14 @@
 {/each}
 
 <g
-  transition:svgFade="{{duration: 1000}}"
+  transition:svgFade="{{ duration: 1000 }}"
   transform="{`translate(${getHexCorner(
     105,
     flip ? direction + 1 : direction
   )}) rotate(${direction * 51.5 + (flip ? -95 : 86)})`}"
 >
   <text x="50" y="{flip ? 5 : 0}" text-anchor="middle">
-    {radarTranslation[name]}
+    {LIFE_PARTS[name]}
   </text>
   <text x="50" y="{flip ? 18 : -10}" text-anchor="middle" class="value">
     {value}
