@@ -1,18 +1,10 @@
 import { writable } from "svelte/store";
-const defaultStore = [
-  "hobby",
-  "friendship",
-  "health",
-  "job",
-  "love",
-  "rich",
-  "family",
-];
+import { defaultSectors } from "../constants";
 
 function Circle() {
   /* инициализируем хранилище с начальным состоянием */
   const { subscribe, update } = writable(
-    defaultStore.map((item) => ({ name: item, value: 0 }))
+    defaultSectors.map((item) => ({ name: item, value: 0 }))
   );
   /* возвращаем объект с функцией подписки и доступными действиями */
   return {

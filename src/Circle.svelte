@@ -1,7 +1,7 @@
 <script>
   import { get } from "svelte/store";
   import Sector from "./Sector.svelte";
-  import { activeSector, circle } from "./store/store.js";
+  import { activeSector, circle } from "./store/circle-store.js";
 
   const getCircleElementAtPoint = (e) => {
     /* определяем тип события: касание или мышь */
@@ -54,7 +54,7 @@
 
 <style>
   .circle {
-    height: 90%;
+    height: 100%;
     margin: 0 auto;
   }
 </style>

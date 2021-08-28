@@ -34,6 +34,7 @@
     height: 100%;
     display: grid;
     width: 100%;
+    overflow: hidden;
     grid-template-columns: 2fr 30px;
   }
 </style>
