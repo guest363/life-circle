@@ -21,6 +21,13 @@
   }
   :global(html) {
     height: 100%;
+    --hobby_color: #7c3f7a;
+    --friendship_color:#5c6bc0;
+    --health_color: #e5b744;
+    --rich_color: #469573;
+    --job_color: #e16838;
+    --love_color: #e23f45;
+    --family_color:#dfe23f;
   }
   .container--full {
     justify-content: center;

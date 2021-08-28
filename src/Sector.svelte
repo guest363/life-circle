@@ -68,24 +68,24 @@
     font-size: 12px;
   }
   .rich {
-    fill: #469573;
+    fill: var(--rich_color);
   }
   .hobby {
-    fill: #7c3f7a;
+    fill: var(--hobby_color);
   }
   .friendship {
-    fill: #5c6bc0;
+    fill: var(--friendship_color);
   }
   .health {
-    fill: #e5b744;
+    fill: var(--health_color);
   }
   .job {
-    fill: #e16838;
+    fill: var(--job_color);
   }
   .love {
-    fill: #e23f45;
+    fill: var(--love_color);
   }
   .family {
-    fill: #dfe23f;
+    fill: var(--family_color);
   }
 </style>
