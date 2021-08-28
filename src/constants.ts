@@ -18,3 +18,4 @@ export const defaultSectors = [
 ];
 
 export const LS_TODO = "todo-list-cf";
+export const LS_CIRCLE = "circle-value-cf";
