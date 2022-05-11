@@ -1,3 +1,3 @@
 # Колесо жизни
 
-[Посмотреть](https://github.com/guest363/life-circle.git)
+[Посмотреть](https://life-circle-3e4ac.web.app/)
